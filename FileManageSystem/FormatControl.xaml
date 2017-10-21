@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="FileManageSystem.FormatControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:FileManageSystem"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Margin="6">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            
+        </Grid.RowDefinitions>
+        <TextBlock FontFamily="宋体">你确定要格式化？(不可撤销)</TextBlock>
+        
+        <StackPanel Orientation="Horizontal" Grid.Row="1"
+                    Margin="0 16 0 0">
+            <Button IsDefault="True" Click="sure_click" Style="{DynamicResource MaterialDesignFlatButton}"
+                    Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
+                <Button.CommandParameter>
+                    <system:Boolean>True</system:Boolean>
+                </Button.CommandParameter>
+                确定
+            </Button>
+            <Button IsCancel="True" Click="cancle_click" Margin="8 0 0 0" Style="{DynamicResource MaterialDesignFlatButton}"
+                    Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}">
+                <Button.CommandParameter>
+                    <system:Boolean>False</system:Boolean>
+                </Button.CommandParameter>
+                取消
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

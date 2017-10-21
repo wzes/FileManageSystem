@@ -1,0 +1,60 @@
+﻿<Window x:Class="FileManageSystem.AttributeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:FileManageSystem"
+        mc:Ignorable="d"
+        Title="AttributeWindow"  Height="340" Width="200" Topmost="True" ResizeMode="NoResize" BorderThickness="1" WindowStyle="None">
+    <Grid>
+        <Grid materialDesign:ColorZoneAssist.Mode="PrimaryDark">
+            <ListBox Width="200" SelectionChanged="click" Name="listBox_attribution">
+                <ListBoxItem Name="open_item">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="OpenInNew"  VerticalAlignment="Center" Width="20" Height="20"/>
+                        <TextBlock Margin="5 0 0 0"  Text="打开" FontFamily="黑体"  VerticalAlignment="Center" />
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <TextBlock Margin="25 0 0 0"  Text="取消" FontFamily="黑体"  VerticalAlignment="Center" />
+                </ListBoxItem>
+                <Separator/>
+                <ListViewItem Name="copy_item">
+                    <StackPanel Orientation="Horizontal" >
+                        <materialDesign:PackIcon Kind="ContentCopy"  VerticalAlignment="Center" Width="20" Height="20"/>
+                        <TextBlock Margin="5 0 0 0"  Text="复制"  Width="140"  FontFamily="黑体" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Name="stick_item">
+                    <StackPanel Orientation="Horizontal" >
+                        <materialDesign:PackIcon Kind="Sticker"  VerticalAlignment="Center" Width="20" Height="20"/>
+                        <TextBlock Margin="5 0 0 0"  Text="粘贴"  Width="140"  FontFamily="黑体" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Name="cut_item">
+                    <TextBlock Margin="25 0 0 0" VerticalAlignment="Center"  Text="剪切"   FontFamily="黑体" />
+                </ListViewItem>
+                <ListViewItem Name="rename_item">
+                    <TextBlock Margin="25 0 0 0" VerticalAlignment="Center" Text="重命名"  FontFamily="黑体"  />
+                </ListViewItem>
+                <ListViewItem Name="delete_item">
+                    <StackPanel Orientation="Horizontal" >
+                        <materialDesign:PackIcon Kind="Close"  VerticalAlignment="Center" Width="20" Height="20"/>
+                        <TextBlock Margin="5 0 0 0" VerticalAlignment="Center" Text="删除"   FontFamily="黑体"  />
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Name="new_item">
+                    <TextBlock Margin="25 0 0 0" Text="新建文件"  FontFamily="黑体" />
+                </ListViewItem>
+                <Separator/>
+                <ListViewItem>
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Margin="25 0 0 0"  Text="属性"  Width="140"  FontFamily="黑体" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+            </ListBox>
+        </Grid>
+    </Grid>
+</Window>
